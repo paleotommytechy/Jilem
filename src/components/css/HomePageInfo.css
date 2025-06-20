@@ -1,0 +1,169 @@
+.first-section{
+  position: relative; /* NEW: enables positioning context for .section */
+  padding-top: 100px;
+  margin: 50px 0;
+  background: linear-gradient(to right, darkorange, orange);
+  border-radius: 20px;
+  z-index: 1;  
+}
+.section{
+  position: absolute;
+  bottom: -300px; /* Adjust based on how much overlap you want */
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 100px;
+  margin: 0; /* Remove vertical margins for overlay */
+  background: linear-gradient(to right, purple, mediumpurple);
+  border-radius: 20px;
+  z-index: 2; /* Above .first-section */
+  width: 90%;
+
+}
+.card{
+  width: 200px;
+}
+.first-card-full{
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 100px 50px;
+  color: black;
+}
+.card-full{
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  text-align: center;
+  padding-bottom: 100px 50px;
+}
+
+.overlay-image {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 75%;
+  height: 50%;
+  border-radius: 20px;
+
+}
+.overlay-image img{
+  border: 5px solid mediumpurple ;
+}
+
+.space{
+  padding: 200px;
+}
+.text-title2{
+  text-align: center;
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+
+/*Styling for sermon-section*/
+.sermon-section{
+  position: relative; /* NEW: enables positioning context for .section */
+  padding-top: 100px;
+  margin: 50px 0 -70px 0;
+  background: linear-gradient(to right, darkorange, orange);
+  border-radius: 20px;
+  z-index: 10;  
+}
+.sermon-card-full{
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sermon-section-expand{
+  position: relative; /* NEW: enables positioning context for .section */
+  padding-top: 50px;
+  margin: 50px 0;
+  background: white;
+  border-radius: 0 0 20px 20px ;
+  z-index: 5;
+}
+/*styling for Event-section*/
+.event{
+  font-family: 'Segoe UI' sans-serif;
+}
+.btn-purple{
+  color:white;
+  background-color: #7d4dff;
+  border-radius: 25px;
+}
+.btn-purple:hover{
+  color:white;
+  background-color: black;
+}
+.edit-btn-dark{
+  color:white;
+  background-color: black;
+  border-radius: 25px;
+}
+.edit-btn-dark:hover{
+  color:white;
+  background-color: #7d4dff;
+  border-radius: 25px;
+}
+.rounded-top-img{
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+/*styling for Senior-pastor section*/
+.senior-pastor-section{
+  font-family: 'Segoe UI' sans-serif;
+  background-color: #f8f9fa;
+
+}
+.purple-section{
+  background-color: #2d196d;
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+  padding-top: 50px;
+  margin: 50px 0 -70px 0;
+  
+}
+.pastor-name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.pastor-title{
+  font-size: 1.5rem;
+  color: #cfcfff;
+}
+.what-to-expect{
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+  background-color: #5f4690;
+  position: relative;
+  z-index: 5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 50px 0;
+  border-radius: 0 0 20px 20px;
+/*  background-color: linear-gradient(to right, #5f4690, #e0d6f8);*/
+}
+.video-wrapper{
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+}
+.video-wrapper img{
+  width: 100%;
+  filter: blur(2px);
+}
+.faq{
+  display: none;
+}
