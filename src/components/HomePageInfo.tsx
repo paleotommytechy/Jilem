@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/HomePageInfo.css'; 
-import eventImage from '../assets/sermon1.jpg';
+import eventImage from '/assets/sermon1.jpg';
 
 
 type Sermon = {
@@ -16,27 +16,27 @@ const sermons: Sermon[] = [
     id: 1,
     title: 'LEARN',
     title2: 'About Our Church',
-    image: '/src/assets/sermon1.jpg',
+    image: '/assets/sermon1.jpg',
   },
   {
     id: 2,
     title: 'WORSHIP',
     title2: 'View Service Times',
-    image: '/src/assets/sermon2.jpg',
+    image: '/assets/sermon2.jpg',
 
   },
   {
     id: 3,
     title: 'GET INVOLVED',
     title2: 'Upcoming Events',
-    image: '/src/assets/sermon4.jpg',
+    image: '/assets/sermon4.jpg',
 
   },
   {
     id: 4,
     title: 'GIVE',
     title2: 'Donate to the Church',
-    image: '/src/assets/sermon3.jpg',
+    image: '/assets/sermon3.jpg',
   },
   ];
 
@@ -109,7 +109,7 @@ const HomePageInfo: React.FC = () => {
 
             <div className="overlay-image">
               {<img
-                src='/src/assets/sermon1.jpg'
+                src='/assets/sermon1.jpg'
                 className="overlay-image"
                 alt="overlay-image"
                 style={{ objectFit: 'cover', height: '150px' }}
@@ -135,7 +135,7 @@ const HomePageSermon: React.FC = () => {
               <div
                 className="w-100 h-1000 text-white position-relative shadow-sm  "
                 style={{
-                  backgroundImage: `url('/src/assets/sermon1.jpg')`,
+                  backgroundImage: `url('/assets/sermon1.jpg')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   borderRadius: '20px',

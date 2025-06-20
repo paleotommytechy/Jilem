@@ -15,14 +15,14 @@ const sermons: Sermon[] = [
     id: 1,
     title: 'Jesus came to bring Joy',
     date: 'February 18, 2023',
-    image: '/src/assets/sermon1.jpg',
+    image: '/assets/sermon1.jpg',
     author: 'JILEM',
   },
   {
     id: 2,
     title: 'Is “Repent!” in the Gospel?',
     date: 'February 16, 2023',
-    image: '/src/assets/sermon2.jpg',
+    image: '/assets/sermon2.jpg',
     author: 'JILEM',
   },
   // {
@@ -66,7 +66,7 @@ const SermonGrid: React.FC = () => {
                 <h5 className="card-title">{sermon.title}</h5>
                 <p className="card-text small">
                   <img
-                    src="/src/assets/logo-icon.jpeg"
+                    src="/assets/logo-icon.jpeg"
                     alt="logo"
                     width="20"
                     height="20"

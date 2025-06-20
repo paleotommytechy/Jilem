@@ -163,7 +163,7 @@ const Navbar: React.FC<NavbarProps> = ({
               left: 0,
               right: 0,
               bottom: 0,
-              backgroundImage: `url('/src/assets/sermon1.jpg')`,
+              backgroundImage: `url('/assets/sermon1.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               filter: 'blur(1.5px)',
