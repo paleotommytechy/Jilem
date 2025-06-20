@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 
           {/* LOGO + NAME */}
           <div className="col-md-3">
-            <h1 className="navbar-brand text-white logo-jilem" to="/">JILEM</h1>
+            <h1 className="navbar-brand text-white logo-jilem">JILEM</h1>
           </div>
 
           {/* LOCATION & CONTACT */}

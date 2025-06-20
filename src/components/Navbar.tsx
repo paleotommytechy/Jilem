@@ -78,9 +78,10 @@ const Navbar: React.FC<NavbarProps> = ({
           className="mobile-sidebar position-fixed top-0 end-0 vh-100 shadow-lg z-3 p-4"
           style={{
             width: '260px',
-            borderTopLeftRadius: '20px',
-            borderBottomLeftRadius: '20px',
+            borderTopRightRadius: '20px',
+            borderBottomRightRadius: '20px',
             transition: 'transform 0.3s ease-in-out',
+            color: 'white',
           }}
         >
           <button
@@ -93,25 +94,25 @@ const Navbar: React.FC<NavbarProps> = ({
           <nav className="mt-5">
             <ul className="navbar-nav d-flex flex-column gap-3">
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/" onClick={toggleSidebar}>🏠 Home</Link>
+                <Link className="nav-link text-white" to="/" onClick={toggleSidebar}>🏠 Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/about" onClick={toggleSidebar}>🙏 About Us</Link>
+                <Link className="nav-link text-white" to="/about" onClick={toggleSidebar}>🙏 About Us</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/sermons" onClick={toggleSidebar}>🎙️ Sermons</Link>
+                <Link className="nav-link text-white" to="/sermons" onClick={toggleSidebar}>🎙️ Sermons</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/events" onClick={toggleSidebar}>📅 Events</Link>
+                <Link className="nav-link text-white" to="/events" onClick={toggleSidebar}>📅 Events</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/donate" onClick={toggleSidebar}>💝 Donations</Link>
+                <Link className="nav-link text-white" to="/donate" onClick={toggleSidebar}>💝 Donations</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/contact" onClick={toggleSidebar}>✉️ Contact</Link>
+                <Link className="nav-link text-white" to="/contact" onClick={toggleSidebar}>✉️ Contact</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-dark" to="/blog" onClick={toggleSidebar}>📰 Blog</Link>
+                <Link className="nav-link text-white" to="/blog" onClick={toggleSidebar}>📰 Blog</Link>
               </li>
               <li className="nav-item d-flex gap-3 mt-4">
                 <a className="text-purple fs-5" href="https://facebook.com" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
@@ -176,7 +177,7 @@ const Navbar: React.FC<NavbarProps> = ({
             {bannerType === 'home' && (
               <>
                 <h1 className="fw-bold text-uppercase" style={{ fontSize: '2rem' }}>
-                  {bannerTitle?.split(' ').map((word, i) => (i === 1 ? <br key={i} /> : null))}{bannerTitle}
+                  {bannerTitle}
                 </h1>
                 {bannerSubtitle && <p className="bannerSubtitle fst-italic fs-5 mt-2">{bannerSubtitle}</p>}
                 {showActionButtons && (

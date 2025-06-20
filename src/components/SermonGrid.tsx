@@ -76,10 +76,10 @@ const SermonGrid: React.FC = () => {
                 </p>
               </div>
               <div className="icon-overlay">
-                <div className="icon-circle me-2" onClick={() => handlePlay('audio')}>
+                <div className="icon-circle me-2" >
                   <i className="bi bi-music-note"></i>
                 </div>
-                <div className="icon-circle" onClick={() => handlePlay('video')}>
+                <div className="icon-circle">
                   <i className="bi bi-camera-video"></i>
                 </div>
               </div>
