@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/HomePageInfo.css'; 
 import eventImage from '/assets/sermon1.jpg';
+import Footer from '../components/Footer'
 
 
 type Sermon = {
@@ -64,6 +65,7 @@ const HomePageInfo: React.FC = () => {
                       height: '300px',
                       overflow: 'hidden',
                       maxWidth: '100%',
+                      animation: 'fadeIn 1.2s ease-in-out',
                     }}
                   >
                     {/* Overlay */}
@@ -154,9 +156,9 @@ const HomePageSermon: React.FC = () => {
                     </div>
 
 
-                  <div className="d-flex justify-content-center  gap-3 mt-4 flex-wrap">
+                  <div className=" d-flex justify-content-center gap-3 mt-4 flex-wrap">
                       <button
-                        className="btn"
+                        className="btn btn-modern"
                         style={{
                           backgroundColor: 'orange',
                           color: 'black',
@@ -167,10 +169,11 @@ const HomePageSermon: React.FC = () => {
                           marginLeft: '50px',
                         }}
                       >
-                        Watch Semon
+                        Watch Sermon
                       </button>
                       <button
-                        className="btn"                      style={{
+                        className="btn btn-modern "
+                        style={{
                           backgroundColor: 'white',
                           color: 'black',
                           borderRadius: '25px',
@@ -211,11 +214,11 @@ const HomePageEvent: React.FC = () => {
         <p className="fs-5">This purpose of this conference is to fellowship together and partner with Holy Spirit</p>
 
         <div className="d-flex gap-3 my-4">
-          <Link className="btn btn-purple px-4" to="/">View Event</Link>
-          <Link className="btn edit-btn-dark px-4" to="/">More Event</Link>
+          <Link className="btn btn-purple px-4 fade-in" to="/">View Event</Link>
+          <Link className="btn edit-btn-dark px-4 fade-in" to="/">More Event</Link>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 fade-in">
           <img src={eventImage} className="img-fluid rounded-top-img shadow"/>
         </div>
       </div>
@@ -227,9 +230,11 @@ const HomePageSeniorPastor: React.FC = () => {
   return (
     <>
       <div className="purple-section">
-        <div className="pastor-name">Oyewole Isaac</div>
-        <div className="pastor-title">Senior Pastor</div>
-        <p className="mt-3">Our church was founded in 1999 with a vision to bring the message of hope and salvation through Jesus Christ to our local community. What began as a small gathering of faithful believers in a modest space has grown into a vibrant, Spirit-filled congregation rooted in love, prayer, and service.<br/>Over the years, God has guided us through seasons of growth and transformation. Through dedicated leadership, passionate worship, and a heart for outreach, we have continued to impact lives both locally and globally.<br/>Today, our church stands as a beacon of faith, welcoming people from all walks of life to experience God's grace. We remain committed to preaching the gospel, making disciples, and living out Christ's love in everything we do.<br/>To God be the glory for all He has done and continues to do in our midst.</p>
+        <div className="pastor-name">Apostle (Dr) Oyewole Emmanuel Adebisi</div>
+        <div className="pastor-title">General Overseer</div>
+        <p className="mt-3">Jesus Is Lord Evangelistic Mission(JILEM) was divinely founded by Apostle(Dr) Oyewole Emmanuel Adebisi in January 1998, with the first inaugral service held in the second week of Feburary 1998.
+        <br/>The mission began humbly in an unfinished building to Mr. Odunlade Nathaniel, a goldsmith inOwode Market, located behind Bukoye Block Industries, Ijagbo, Oyun Local Government, Kwara State, Nigeria.
+        <br/><br/>Present at the foundation were a few faithful brethren, including Brother Oyewole Oluwafemi Joshua, as well as earlier supporters like Brother Ogunsola Michael Adebisi. The first service was held from 9:00 AM to 12:30 PM, with 9 souls inattendance, and a humble offering of &#8358;1.30.<br/><br/>From these small beginnings, God has graciously expanded the mission, reaching cities, towns, villages, and even nations, touching countless lives with the gospel of Christ.</p>
         <div className="video-wrapper mt-4">
           <video className="img-fluid rounded shadow"
             width="640"
@@ -260,13 +265,75 @@ const HomePageSeniorPastor: React.FC = () => {
 const HomePageStories: React.FC = () => {
   return (
     <>
+      <div className="container py-4">
+        <div className="mb-5">
+          <h2 className="fw-bold">Stories & Articles</h2>
+          <p className="text-muted fst-italic">...and inspiration in God</p>
+
+          <div className='card border-0 rounded-4  overflow-hidden mt-4 mx-auto w-100'>
+            <img 
+              src={eventImage} 
+              className="mx-auto d-block w-100 rounded-4"
+              style={{height:'220px', objectFit:'cover'}}
+              />
+            <div className="card-body text-center">
+              <div className="d-flex justify-content-center align-items-center gap-4 mb-2">
+                <span className="badge btn-purple">Gospel</span>
+                <small className="text-muted">June 23, 2025</small>
+              </div>
+              <h5 className="card-title fw-bold">PARAKLETOS : The Holy Spirit Our Comforter</h5>
+              <Link className="text-decoration-none text-dark" to="/blog">Read More</Link>
+              {/*arrows*/}
+              <div className="d-flex justify-content-center text-center gap-3 mt-4">
+                <button className="btn  rounded-circle fw-bold custom-purple-btn ">&lt;</button>
+                <button className="btn btn-outline-secondary rounded-circle fw-bold custom-purple-btn">&gt;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
    );
 };
 
 const HomePageContact: React.FC = () => {
   return (
-    <></>
+    <>
+      <div className="contact-section w-100 px-3">
+        <div className="container-fluid my-3 px-0 ">
+            <div className='contact-card-full text-center'>
+              <div
+                className="w-100 text-white position-relative shadow-sm  "
+                style={{
+                  backgroundImage: `url('/assets/sermon2.jpg')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  borderRadius: '20px',
+                  width: '100vh',
+                  height: '60vh',
+                  overflow: 'hidden',
+                  maxWidth: '100%',
+                }}>
+                  <div className='d-flex flex-column align-items-center justify-content-center text-center h-100'>
+                    <h3>Join Us at Church</h3>
+                    <p>Experience God'spresence at church this Sunday</p>
+                  <div className="d-flex justify-content-center mt-2 flex-wrap">
+                    <button className="btn btn-modern">Get Directions
+                      </button>
+                  </div>
+                  <div className="mt-4">
+                    <p className="mb-1">Monday-Thursday<br/><strong>9am-5pm</strong></p>
+                    <p className="mb-0">Sunday<br/><strong>8:30am-11:30pm & 6pm</strong></p>
+                  </div>
+                  </div>
+                </div>
+            </div>
+          </div> 
+      </div>
+      <div className="contact-section-expand">
+        <Footer/>
+      </div>
+    </>
    );
 };
 

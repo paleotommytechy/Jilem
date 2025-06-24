@@ -91,27 +91,27 @@ const Navbar: React.FC<NavbarProps> = ({
             <i className="bi bi-x-lg fs-4"></i>
           </button>
 
-          <nav className="mt-5">
+          <nav className="mobile-navbar mt-5">
             <ul className="navbar-nav d-flex flex-column gap-3">
-              <li className="nav-item">
-                <Link className="nav-link text-white" to="/" onClick={toggleSidebar}>🏠 Home</Link>
+              <li className="nav-item link-to-page">
+               <Link className="nav-link text-white" to="/" onClick={toggleSidebar}>🏠 Home</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/about" onClick={toggleSidebar}>🙏 About Us</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/sermons" onClick={toggleSidebar}>🎙️ Sermons</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/events" onClick={toggleSidebar}>📅 Events</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/donate" onClick={toggleSidebar}>💝 Donations</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/contact" onClick={toggleSidebar}>✉️ Contact</Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item link-to-page">
                 <Link className="nav-link text-white" to="/blog" onClick={toggleSidebar}>📰 Blog</Link>
               </li>
               <li className="nav-item d-flex gap-3 mt-4">

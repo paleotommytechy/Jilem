@@ -1,6 +1,5 @@
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import { HomePageInfo,HomePageSermon,HomePageEvent,HomePageSeniorPastor } from '../components/HomePageInfo'
+import { HomePageInfo,HomePageSermon,HomePageEvent,HomePageSeniorPastor,HomePageStories,HomePageContact } from '../components/HomePageInfo'
 
 
 const HomePage: React.FC = () => {
@@ -9,7 +8,7 @@ const HomePage: React.FC = () => {
       <Navbar
         showBanner={true}
         bannerTitle="WELCOME TO JILEM"
-        bannerSubtitle="Unity people to God and people to people"
+        bannerSubtitle="Uniting people to God and people to people"
         showActionButtons={true}
         bannerType="home"
       />
@@ -17,7 +16,8 @@ const HomePage: React.FC = () => {
       <HomePageSermon />
       <HomePageEvent />
       <HomePageSeniorPastor />
-      <Footer />
+      <HomePageStories />
+      <HomePageContact />
     </div>
   );
 };

@@ -25,25 +25,25 @@ const sermons: Sermon[] = [
     image: '/assets/sermon2.jpg',
     author: 'JILEM',
   },
-  // {
-  //   id: 3,
-  //   title: 'Humility in Prayer',
-  //   date: 'February 18, 2023',
-  //   image: '/src/assets/sermon3.jpg',
-  //   author: 'JILEM',
-  // },
-  // {
-  //   id: 4,
-  //   title: 'What is My Faith?',
-  //   date: 'February 16, 2023',
-  //   image: '/src/assets/sermon4.jpg',
-  //   author: 'JILEM',
-  // },
+  {
+    id: 3,
+    title: 'Humility in Prayer',
+    date: 'February 18, 2023',
+    image: '/assets/sermon3.jpg',
+    author: 'JILEM',
+  },
+  {
+    id: 4,
+    title: 'What is My Faith?',
+    date: 'February 16, 2023',
+    image: '/assets/sermon4.jpg',
+    author: 'JILEM',
+  },
   // {
   //   id: 5,
   //   title: 'God Decrees Whatsoever Comes',
   //   date: 'February 19, 2023',
-  //   image: '/src/assets/sermon5.jpg',
+  //   image: '/assets/sermon5.jpg',
   //   author: 'JILEM',
   // },
 ];
@@ -53,8 +53,8 @@ const SermonGrid: React.FC = () => {
     <section className="container my-5">
       <div className="row g-4">
         {sermons.map((sermon) => (
-          <div className="col-12 col-sm-6 col-lg-4" key={sermon.id}>
-            <div className="card h-100 shadow-sm">
+          <div className="col-6 col-sm-4 col-lg-2 " key={sermon.id}>
+            <div className="card h-100 ">
               <img
                 src={sermon.image}
                 className="card-img-top"

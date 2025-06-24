@@ -1,6 +1,7 @@
 // src/components/Footer.tsx
 import React from 'react';
 import './css/Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -31,10 +32,27 @@ const Footer: React.FC = () => {
           <div className="col-md-3">
             <h5 className="footer-title">Quick Links</h5>
             <ul className="list-unstyled text-uppercase">
-              <li><a href="#" className="footer-link">Home</a></li>
-              <li><a href="#" className="footer-link">About Us</a></li>
-              <li><a href="#" className="footer-link">Contact</a></li>
-              <li><a href="#" className="footer-link">Blog</a></li>
+              <li>
+                <Link className="footer-link" to="/"> Home</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/about"> About Us</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/sermons"> Sermons</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/events">Events</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/donate">Donations</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link className="footer-link" to="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
 
