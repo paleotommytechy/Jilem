@@ -1,0 +1,120 @@
+.image-gallery{
+	width: 100%;
+	border-radius: 20px 20px ;
+	background: linear-gradient(90deg, #fba34f, #fff);
+	position: relative; 
+  padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	z-index: 2; 
+	margin-bottom: -40px;
+
+}
+.image-gallery div{
+	margin-top: -10px;
+}
+.image-gallery div h2{
+	margin-top: -30px;
+}
+.col{
+	margin: -2px;
+	padding: 0;
+}
+.row{
+	margin: 0 2px 0 15px;
+}
+.footer-section{
+  background: white;
+  z-index: 1;
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5px;
+
+}
+
+.title1 span{
+	color: orange;
+}
+.edit-belief{
+  background: linear-gradient(to left, #5f4690, purple);
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+  padding-top: 50px;
+  margin: 50px 0 -70px 0; 
+}
+.edit-belief h6{
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: -10px;
+}
+.our-core-values{
+  padding: 3rem 1rem;
+  text-align: center;
+  color: white;
+  background-color: #2d196d;
+  position: relative;
+  z-index: 5;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 50px 0;
+  border-radius: 0 0 20px 20px;
+/*  background-color: linear-gradient(to right, #5f4690, #e0d6f8);*/
+}
+.our-core-values span{
+	color: orange;
+}
+.video-wrapper{
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 1.5rem;
+  height:180px;
+  background-image: url('/assets/sermon1.jpg') ;
+  background-position: center;
+  background-size: cover;
+  filter: blur(0.1px);
+}
+.video-wrapper i{
+	font-size: 40px;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+}
+
+.faq h3{
+  display: block;
+  font-size: 15px;
+}
+.pastor{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pastor img{
+	width: 50%;
+	height: 50%;
+
+}
+.icon-edit{
+	margin-right: 38px;
+	margin-bottom: -20px;
+}
+.icon-edit a{
+	background-color: #5f4690;
+	border-radius: 1rem;
+	color: white;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 1rem;
+	padding: 6px 12px;
+}

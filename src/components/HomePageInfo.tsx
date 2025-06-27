@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './css/HomePageInfo.css'; 
 import eventImage from '/assets/sermon1.jpg';
@@ -41,22 +41,52 @@ const sermons: Sermon[] = [
   },
   ];
 
+const slides = [
+  {
+    title: "PARAKLETOS : The Holy Spirit Our Comforter",
+    date: "June 23, 2025",
+    badge: "Gospel",
+    image: "/assets/sermon2.jpg",
+    link: "/blog"
+  },
+  {
+    title: "THE POWER OF FAITH IN TROUBLED TIMES",
+    date: "July 5, 2025",
+    badge: "Faith",
+    image: "/assets/sermon1.jpg",
+    link: "/blog"
+  },
+ 
+]
+
 
 const HomePageInfo: React.FC = () => {
   return (
     <>
-      <div className="first-section w-100 py-3 px-3 text-center text-white">
+      <div className="mt-5 text-center">
+        <h3 className='text-dark'>Ever believer was created to belong to a community. It was never God's heart for us to do this life alone.</h3>
+        <div className="mt-5 fade-in">
+          <img src={eventImage} className="img-fluid rounded-top-img shadow"/>
+        </div>
+      </div>
+      <div className='mt-4 mx-3'>
+        <p className='text-muted fw-bold ' style={{fontSize:'12px'}}>WELCOME TO OUR CHURCH</p>
+        <h3 className='fw-bold'>Empowered by God to reach others for Christ</h3>
+        <p className='text-muted'>Our Community make us unique. They have an energy that reverberates around them. Their mission in life is to ensure the wonder in the world is not overlooked.</p>
+        <Link className="more-btn-modern btn px-4 fade-in" to="/contact">More About Us</Link>
+      </div>
 
+      <div className="first-section w-100 py-3 px-3 text-center text-white">
         <div className="container-fluid  my-5 text-center text-white">
           <div className='first-card-full py-3 px-3 mx-auto '>
             <h2 className='mt-6' >Your Next Steps</h2>
             <h6 className='mt-6'>No matter where you are in the faith journey, there is always a next step</h6>
             <div className='container my-5'>
-            <div className="row gy-2 gx-1">
+            <div className="row gy-3 gx-0" >
               {sermons.map((sermon) => (
-                <div className="col-6 col-sm-4 col-lg-3 mb-0 d-flex justify-content-center" key={sermon.id}>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-0 d-flex justify-content-center" key={sermon.id}>
                   <div
-                    className="card h-1000 text-white position-relative shadow-sm"
+                    className="card w-100 text-white position-relative shadow-sm"
                     style={{
                       backgroundImage: `url(${sermon.image})`,
                       backgroundSize: 'cover',
@@ -227,6 +257,10 @@ const HomePageEvent: React.FC = () => {
 };
 
 const HomePageSeniorPastor: React.FC = () => {
+  const [show, setShow] = useState(false);
+  const videoId = "OaXP-QwtX-U"; // Random YouTube video of a pastor preaching
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
   return (
     <>
       <div className="purple-section">
@@ -236,14 +270,45 @@ const HomePageSeniorPastor: React.FC = () => {
         <br/>The mission began humbly in an unfinished building to Mr. Odunlade Nathaniel, a goldsmith inOwode Market, located behind Bukoye Block Industries, Ijagbo, Oyun Local Government, Kwara State, Nigeria.
         <br/><br/>Present at the foundation were a few faithful brethren, including Brother Oyewole Oluwafemi Joshua, as well as earlier supporters like Brother Ogunsola Michael Adebisi. The first service was held from 9:00 AM to 12:30 PM, with 9 souls inattendance, and a humble offering of &#8358;1.30.<br/><br/>From these small beginnings, God has graciously expanded the mission, reaching cities, towns, villages, and even nations, touching countless lives with the gospel of Christ.</p>
         <div className="video-wrapper mt-4">
-          <video className="img-fluid rounded shadow"
-            width="640"
-            height="360"
-            controls
-            src="https://www.youtube.com/embed/OaXP-QwtX-U"
-      >
-        <img src={eventImage} className="img-fluid rounded shadow"/>
-      </video>
+                {/* Thumbnail */}
+            <img
+              src={thumbnailUrl}
+              alt="Video thumbnail"
+              className="img-fluid rounded shadow"
+              style={{ cursor: 'pointer' }}
+              onClick={() => setShow(true)}
+            />
+
+            {/* Modal */}
+            {show && (
+              <div
+                className="modal d-block"
+                tabIndex={-1}
+                onClick={() => setShow(false)}
+                style={{
+                  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                }}
+              >
+                <div
+                  className="modal-dialog modal-lg modal-dialog-centered"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="modal-content">
+                    <div className="modal-body p-0">
+                      <div className="ratio ratio-16x9">
+                        <iframe
+                          src={`https://www.youtube.com/watch?v=H0fSp7qVZZ8`}
+                          title="Pastor Preaching"
+                          allow="autoplay; encrypted-media"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
         </div>
       </div>
       <div className="what-to-expect">
@@ -251,10 +316,11 @@ const HomePageSeniorPastor: React.FC = () => {
           <p className="mt-2">Learn more about our values and our story as a church by visiting the about us page</p>
           <div className="faq">
             <h3>What are your gathering like?</h3><hr/>
-            <h3>What are your gathering like?</h3><hr/>
-            <h3>What are your gathering like?</h3><hr/>
-            <h3>What are your gathering like?</h3><hr/>
-            <h3>What are your gathering like?</h3><hr/>
+            <h3>What happens when i visit?</h3><hr/>
+            <h3>What should i bring?</h3><hr/>
+            <h3>How should i dress?</h3><hr/>
+            <h3>Can i invite people to come with?</h3><hr/>
+            <h3>What if we didn't answer your question?</h3><hr/>
           </div>
       </div>
       
@@ -263,6 +329,19 @@ const HomePageSeniorPastor: React.FC = () => {
 };
 
 const HomePageStories: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
+  }, 17000);
+
+  return () => clearInterval(interval); // cleanup
+}, [slides.length]);
+  const currentSlide = slides[currentIndex];
+  const prevSlide = () => setCurrentIndex((currentIndex - 1 + slides.length) % slides.length);
+  const nextSlide = () => setCurrentIndex((currentIndex + 1) % slides.length);
+
+
   return (
     <>
       <div className="container py-4">
@@ -270,23 +349,23 @@ const HomePageStories: React.FC = () => {
           <h2 className="fw-bold">Stories & Articles</h2>
           <p className="text-muted fst-italic">...and inspiration in God</p>
 
-          <div className='card border-0 rounded-4  overflow-hidden mt-4 mx-auto w-100'>
+          <div className='custom-card border-0  overflow-hidden mt-4 mx-auto w-100'>
             <img 
-              src={eventImage} 
+              src={currentSlide.image} 
               className="mx-auto d-block w-100 rounded-4"
               style={{height:'220px', objectFit:'cover'}}
               />
-            <div className="card-body text-center">
+            <div className="custom-card-body text-center">
               <div className="d-flex justify-content-center align-items-center gap-4 mb-2">
-                <span className="badge btn-purple">Gospel</span>
-                <small className="text-muted">June 23, 2025</small>
+                <span className="badge btn-purple">{currentSlide.badge}</span>
+                <small className="text-muted">{currentSlide.date}</small>
               </div>
-              <h5 className="card-title fw-bold">PARAKLETOS : The Holy Spirit Our Comforter</h5>
-              <Link className="text-decoration-none text-dark" to="/blog">Read More</Link>
+              <h5 className="custom-card-title fw-bold">{currentSlide.title}</h5>
+              <Link className="text-decoration-none text-dark" to="{currentSlide.link}">Read More</Link>
               {/*arrows*/}
               <div className="d-flex justify-content-center text-center gap-3 mt-4">
-                <button className="btn  rounded-circle fw-bold custom-purple-btn ">&lt;</button>
-                <button className="btn btn-outline-secondary rounded-circle fw-bold custom-purple-btn">&gt;</button>
+                <button className="btn  rounded-circle fw-bold custom-purple-btn" onClick={prevSlide}>&lt;</button>
+                <button className="btn btn-outline-secondary rounded-circle fw-bold custom-purple-btn" onClick={nextSlide}>&gt;</button>
               </div>
             </div>
           </div>

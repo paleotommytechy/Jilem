@@ -1,0 +1,51 @@
+.image-gallery{
+	width: 100%;
+	border-radius: 20px 20px ;
+	background: linear-gradient(90deg, #fba34f, #fff);
+	position: relative; 
+  	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0 auto;
+	z-index: 2; 
+	margin-bottom: -40px;
+
+}
+.image-gallery div{
+	margin-top: -10px;
+}
+.image-gallery div h2{
+	margin-top: -30px;
+}
+.controlEdit{
+	border-radius: 25px;
+}
+.controlEdit:hover,
+.controlEdit:active{
+	border: 0.5px solid #7C4DFF;
+}
+.labelEdit{
+	font-weight: bold;
+	font-size: 12px;
+}
+.labelButton{
+	width: 100%;
+	font-size: 13px;
+	font-weight: bold;
+}
+.col{
+	margin: -2px;
+	padding: 0;
+}
+.row{
+	margin: 0 2px 0 15px;
+}
+.footer-section{
+  background: white;
+  z-index: 1;
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 5px;
+
+}

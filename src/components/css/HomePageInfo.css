@@ -1,3 +1,23 @@
+.more-btn-modern{
+  animation: fadeIn 1.2s ease-in-out;
+  background-color: #7d4dff;
+  color: white;
+  border-radius: 25px;
+  border: none;
+}
+.more-btn-modern:hover{
+  background: black ;
+  color: white;
+  transform: translateY(-10px);
+  transition: all 0.9s ease;
+}
+.more-btn-modern:active{
+  background-color: black;
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px #7d4dff;
+}
+
+
 .first-section{
   position: relative; /* NEW: enables positioning context for .section */
   padding-top: 100px;
@@ -20,7 +40,6 @@
 
 }
 .card{
-  width: 200px;
   transition: transform 0.2s ease-out;
   will-change: transform;
 }
@@ -171,8 +190,10 @@
   width: 100%;
   filter: blur(2px);
 }
-.faq{
-  display: none;
+
+.faq h3{
+  display: block;
+  font-size: 15px;
 }
 
 
@@ -191,6 +212,25 @@
   border: 1px solid #7d4dff;
 }
 
+/*Styling for stories and article*/
+.custom-card {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  position: relative;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+
+}
+.custom-card-title{
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.custom-card-body{
+  flex: 1 1 auto;
+  padding: 1rem;
+}
 
 /*Styling for contact-section*/
 .contact-section{
@@ -259,3 +299,4 @@
   from{ opacity:0; transform:scale(0.95); }
   to{ opacity:1; transform:scale(1); }
 }
+

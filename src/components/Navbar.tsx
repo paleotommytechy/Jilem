@@ -145,7 +145,7 @@ const Navbar: React.FC<NavbarProps> = ({
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             height: '75vh',
-            maxHeight: '400px',
+            maxHeight: '500px',
             position: 'relative',
             borderBottomLeftRadius: '20px',
             borderBottomRightRadius: '20px',
