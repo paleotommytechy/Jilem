@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './css/HomePageInfo.css'; 
-import eventImage from '/assets/sermon1.jpg';
+import eventImage from '/assets/banner.jpg';
+import eventImage2 from '/assets/image5.jpg';
 import Footer from '../components/Footer'
 
 
@@ -10,6 +11,7 @@ type Sermon = {
   title: string;
   title2: String;
   image: string;
+  link: string;
   };
 
 const sermons: Sermon[] = [
@@ -18,26 +20,29 @@ const sermons: Sermon[] = [
     title: 'LEARN',
     title2: 'About Our Church',
     image: '/assets/sermon1.jpg',
+    link: '/about'
   },
   {
     id: 2,
     title: 'WORSHIP',
     title2: 'View Service Times',
     image: '/assets/sermon2.jpg',
+    link: 'contact'
 
   },
   {
     id: 3,
     title: 'GET INVOLVED',
     title2: 'Upcoming Events',
-    image: '/assets/sermon4.jpg',
-
+    image: '/assets/judah.jpg',
+    link: '/events'
   },
   {
     id: 4,
     title: 'GIVE',
     title2: 'Donate to the Church',
-    image: '/assets/sermon3.jpg',
+    image: '/assets/image6.jpg',
+    link: '/donate'
   },
   ];
 
@@ -46,14 +51,42 @@ const slides = [
     title: "PARAKLETOS : The Holy Spirit Our Comforter",
     date: "June 23, 2025",
     badge: "Gospel",
-    image: "/assets/sermon2.jpg",
+    image: "/assets/image5.jpg",
     link: "/blog"
   },
   {
     title: "THE POWER OF FAITH IN TROUBLED TIMES",
-    date: "July 5, 2025",
+    date: "June 25, 2025",
     badge: "Faith",
-    image: "/assets/sermon1.jpg",
+    image: "/assets/image7.jpg",
+    link: "/blog"
+  },
+  {
+    title: "THE POWER IN PRAISE",
+    date: "July 1, 2025",
+    badge: "Gratitude",
+    image: "/assets/judah.jpg",
+    link: "/blog"
+  },
+  {
+    title: "THE DOCTRINE OF BAPTISMS",
+    date: "June 20, 2025",
+    badge: "Doctrine",
+    image: "/assets/baptism.jpg",
+    link: "/blog"
+  },
+  {
+    title: "EPIGNOSIS: The Knowledge of Christ",
+    date: "July 2, 2025",
+    badge: "Doctrine",
+    image: "/assets/epignosis.jpg",
+    link: "/blog"
+  },
+  {
+    title: "TEACH US TO PRAY: The power of Prayer",
+    date: "July 3, 2025",
+    badge: "Doctrine",
+    image: "/assets/prayer.jpg",
     link: "/blog"
   },
  
@@ -73,7 +106,7 @@ const HomePageInfo: React.FC = () => {
         <p className='text-muted fw-bold ' style={{fontSize:'12px'}}>WELCOME TO OUR CHURCH</p>
         <h3 className='fw-bold'>Empowered by God to reach others for Christ</h3>
         <p className='text-muted'>Our Community make us unique. They have an energy that reverberates around them. Their mission in life is to ensure the wonder in the world is not overlooked.</p>
-        <Link className="more-btn-modern btn px-4 fade-in" to="/contact">More About Us</Link>
+        <Link className="more-btn-modern btn px-4 fade-in" to="/about">More About Us</Link>
       </div>
 
       <div className="first-section w-100 py-3 px-3 text-center text-white">
@@ -84,7 +117,7 @@ const HomePageInfo: React.FC = () => {
             <div className='container my-5'>
             <div className="row gy-3 gx-0" >
               {sermons.map((sermon) => (
-                <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-0 d-flex justify-content-center" key={sermon.id}>
+                <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-0 d-flex justify-content-center" key={sermon.id} onClick={()=> window.location.href= sermon.link}>
                   <div
                     className="card w-100 text-white position-relative shadow-sm"
                     style={{
@@ -141,7 +174,7 @@ const HomePageInfo: React.FC = () => {
 
             <div className="overlay-image">
               {<img
-                src='/assets/sermon1.jpg'
+                src='/assets/image4.jpg'
                 className="overlay-image"
                 alt="overlay-image"
                 style={{ objectFit: 'cover', height: '150px' }}
@@ -167,7 +200,7 @@ const HomePageSermon: React.FC = () => {
               <div
                 className="w-100 h-1000 text-white position-relative shadow-sm  "
                 style={{
-                  backgroundImage: `url('/assets/sermon1.jpg')`,
+                  backgroundImage: `url('/assets/logos.jpg')`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                   borderRadius: '20px',
@@ -187,7 +220,7 @@ const HomePageSermon: React.FC = () => {
 
 
                   <div className=" d-flex justify-content-center gap-3 mt-4 flex-wrap">
-                      <button
+                      <Link
                         className="btn btn-modern"
                         style={{
                           backgroundColor: 'orange',
@@ -198,10 +231,11 @@ const HomePageSermon: React.FC = () => {
                           fontWeight: 'bold',
                           marginLeft: '50px',
                         }}
+                        to='/sermon'
                       >
                         Watch Sermon
-                      </button>
-                      <button
+                      </Link>
+                      <Link
                         className="btn btn-modern "
                         style={{
                           backgroundColor: 'white',
@@ -211,9 +245,10 @@ const HomePageSermon: React.FC = () => {
                           border: 'none',
                           fontWeight: 'bold',
                         }}
+                        to='/sermon'
                       >
                         All Sermons
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -244,12 +279,12 @@ const HomePageEvent: React.FC = () => {
         <p className="fs-5">This purpose of this conference is to fellowship together and partner with Holy Spirit</p>
 
         <div className="d-flex gap-3 my-4">
-          <Link className="btn btn-purple px-4 fade-in" to="/">View Event</Link>
-          <Link className="btn edit-btn-dark px-4 fade-in" to="/">More Event</Link>
+          <Link className="btn btn-purple px-4 fade-in" to="/event">View Event</Link>
+          <Link className="btn edit-btn-dark px-4 fade-in" to="/event">More Event</Link>
         </div>
 
         <div className="mt-5 fade-in">
-          <img src={eventImage} className="img-fluid rounded-top-img shadow"/>
+          <img src={eventImage2} className="img-fluid rounded-top-img shadow"/>
         </div>
       </div>
     </>
@@ -333,7 +368,7 @@ const HomePageStories: React.FC = () => {
   useEffect(() => {
   const interval = setInterval(() => {
     setCurrentIndex(prevIndex => (prevIndex + 1) % slides.length);
-  }, 17000);
+  }, 12000);
 
   return () => clearInterval(interval); // cleanup
 }, [slides.length]);
@@ -397,8 +432,8 @@ const HomePageContact: React.FC = () => {
                     <h3>Join Us at Church</h3>
                     <p>Experience God'spresence at church this Sunday</p>
                   <div className="d-flex justify-content-center mt-2 flex-wrap">
-                    <button className="btn btn-modern">Get Directions
-                      </button>
+                    <Link to='/contact' className="btn btn-modern">Get Directions
+                      </Link>
                   </div>
                   <div className="mt-4">
                     <p className="mb-1">Monday-Thursday<br/><strong>9am-5pm</strong></p>

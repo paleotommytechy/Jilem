@@ -12,7 +12,7 @@ header p {
 
 header::before{
   filter:blur(2px);
-  background-image: `url('/src/assets/sermon1.jpeg')`;
+  background-image: `url('/src/assets/sermon1.jpg')`;
   background-size: 'cover';
   background-position: 'center';
   position: absolute;

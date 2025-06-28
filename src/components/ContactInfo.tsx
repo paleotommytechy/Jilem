@@ -30,7 +30,7 @@ const ContactInfo: React.FC = () => {
 			</div>
 			<div className="shadow-sm">
 				<img
-					src='/assets/sermon1.jpg'
+					src='/assets/image5.jpg'
 					className='card-img-top'
 					alt='Random image'
 				 />
@@ -75,12 +75,12 @@ const ContactInfo: React.FC = () => {
 			{/*image Grid*/}
 			<Row className='gap-0 row'>
 			  {[
+			  	'judah.jpg',
+			  	'image5.jpg',
+			  	'judah.jpg',
+			  	'sermon4.jpg',
+			  	'sermon2.jpg',
 			  	'sermon1.jpg',
-			  	'sermon4.jpg',
-			  	'sermon3.jpg',
-			  	'sermon4.jpg',
-			  	'sermon2.jpg',
-			  	'sermon2.jpg',
 
 			].map((image, index) =>(
 				<Col className='col' sm={4} xs={4} md={4} key={index}>

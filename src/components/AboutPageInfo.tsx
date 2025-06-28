@@ -17,11 +17,23 @@ type PastorData={
 const pastorData:PastorData = {
 	pastors:[
 	{
-		name:'Oyewole Isaac',
+		name:'Oyewole Emmanuel Adebisi',
 		position:'General Overseer',
-		imageUrl:'/assets/sermon1.jpg',
+		imageUrl:'/assets/pastor 2.jpg',
 		description:'',
-	}
+	},
+	{
+		name:'Oyewole Oluwaseun',
+		position:'Senior Pastor',
+		imageUrl:'/assets/pastor 1.jpg',
+		description:'',
+	},
+	{
+		name:'Mercy Hagin',
+		position:'Prophetess',
+		imageUrl:'/assets/pastor 3.jpg',
+		description:'',
+	},
 ]
 
 }
@@ -32,7 +44,7 @@ const ContactInfo: React.FC = () => {
 		<>
 			<div className="mt-4 mb-0 mx-3 my-3 ">
 				<img
-					src='/assets/sermon1.jpg'
+					src='/assets/image5.jpg'
 					className='card-img-top'
 					alt='Random image'
 				 />
@@ -47,7 +59,7 @@ const ContactInfo: React.FC = () => {
 			</div>
 			<div className="mt-2 mb-4 mx-3 my-3" style={{height:'50%'}}>
 				<img
-					src='/assets/sermon1.jpg'
+					src='/assets/sermon5.jpg'
 					className='card-img-top '
 					alt='Random image'
 					style={{height:'75%'}}
@@ -81,7 +93,7 @@ const ContactInfo: React.FC = () => {
 	        	<div className='row'>
 	        		{pastorData.pastors.map((pastor, idx)=>(
 	        		<div className="col-md-6 mb-4" key={idx}>
-	        			<div className="card border-0">
+	        			<div className="custom-card border-0">
 	        				<div className="pastor position-relative">
 	        					<img src={pastor.imageUrl} alt={pastor.name} className='card-img-top rounded-3' />
 	        					<div className=" icon-edit position-absolute bottom-0 end-0 p-2 d-flex gap-1">
@@ -89,10 +101,10 @@ const ContactInfo: React.FC = () => {
 	        						<a href='olusegunifetomiwa@gmail.com' target='_blank' rel='nonpener nonreferrer'><FaEnvelope /></a>
 	        					</div>
 	        				</div>
-	        				<div className="card-body">
+	        				<div className="custom-card-body">
 	        					<h5 className="fw-bold mb-1">{pastor.name}</h5>
 	        					<h6 className="text-muted text-uppercase mb-2">{pastor.position}</h6>
-	        					<p className="card-text">{pastor.description}</p>
+	        					<p className="custom-card-text">{pastor.description}</p>
 	        				</div>
 	        			</div>
 	        		</div>
@@ -111,12 +123,12 @@ const ContactInfo: React.FC = () => {
 				{/*image Grid*/}
 				<Row className='gap-0 row'>
 				  {[
-				  	'sermon1.jpg',
-				  	'sermon4.jpg',
-				  	'sermon3.jpg',
-				  	'sermon4.jpg',
-				  	'sermon2.jpg',
-				  	'sermon1.jpg',
+				  	'judah.jpg',
+				  	'image5.jpg',
+				  	'judah.jpg',
+				  	'prayer.jpg',
+				  	'image7.jpg',
+				  	'baptism.jpg',
 
 				].map((image, index) =>(
 					<Col className='col' sm={4} xs={4} md={4} key={index}>
