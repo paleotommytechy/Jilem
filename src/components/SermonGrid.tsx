@@ -29,7 +29,7 @@ const sermons: Sermon[] = [
     id: 3,
     title: 'Humility in Prayer',
     date: 'February 18, 2023',
-    image: '/assets/sermon3.jpg',
+    image: '/assets/sermon5.jpg',
     author: 'JILEM',
   },
   {
